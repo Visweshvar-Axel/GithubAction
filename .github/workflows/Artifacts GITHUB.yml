@@ -10,7 +10,8 @@ jobs:
     steps:
       - name: upload
         run: echo "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat velit aperiam sit illo maiores at quas."
-      - uses: actions/upload-artifacts@v2
+
+      - uses: actions/upload-artifact@v2
         with:
           name: file
           path: file.txt
