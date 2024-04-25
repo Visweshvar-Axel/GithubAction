@@ -1,0 +1,19 @@
+name: "SECRETS GITHUB"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Top_secret_env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Top secret direct
+        run: |
+          echo "Top secret ${{ secrets.TOP_SECRET }}"
+          echo "not exist ${{ secrets.i_dont_sxist }}"
+
+      - name: Top secret local env
+        run: |
+          echo "Top secret $TOP_SECRET"
+        env:
+          TOP_SECRET: ${{ secrets.TOP_SECRET }}"
