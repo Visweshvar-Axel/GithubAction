@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print all venv
-        run: |
-          echo env
+        run: env
