@@ -5,8 +5,9 @@ on:
     branches:
       - main # Adjust this to match your branch name
 
-  # pull_request:
-  #   - main
+  pull_request:
+    branches:
+      - main
 
   workflow_dispatch:
 
