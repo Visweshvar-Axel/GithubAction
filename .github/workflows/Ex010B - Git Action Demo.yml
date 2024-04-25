@@ -1,10 +1,25 @@
-name: A basic workflow
+name: My Workflow
 
 on:
   push:
-    branches: ["main"]
-    branches-ignore: ["ignore"]
-    paths: ".github/*"
+    branches:
+      - main # Adjust this to match your branch name
 
-  pull_request:
-    branches: ["main"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Print a message
+        run: echo "Hello, world!"
+
+  build-app:
+    needs: build
+    runs-on: windows-latest
+
+  package:
+    needs: [build-app, build]
+    runs-on: self-hosted
