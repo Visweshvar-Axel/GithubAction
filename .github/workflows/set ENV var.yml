@@ -17,8 +17,4 @@ jobs:
       - name: use the value
         id: step_two
         run: |
-          echo "${{ env.action_state }}"
-
-        env:
-          firstname: viswa
-          textval: value-3
+          echo "$action_state" #output
