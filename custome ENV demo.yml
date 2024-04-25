@@ -1,0 +1,9 @@
+name: 'custome ENV demo'
+
+on: 
+  workflow_displatch:
+
+jobs:
+  custome ENV:
+    - name: 'print env'
+    runs-on:  
