@@ -1,0 +1,13 @@
+name: "All ENV variables"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  all-env-var:
+    name: all env comments
+    runs-on: ubuntu-latest
+    steps:
+      - name: print all venv
+        run: |
+          echo env
