@@ -1,0 +1,17 @@
+name: "SECRETS ENV GITHUB"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Top_secret_env:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: production
+      url: http://github.com
+
+    steps:
+      - name: Top secret ENV direct
+        run: |
+          echo "Top secret ${{ secrets.APP_SECRET }}"
