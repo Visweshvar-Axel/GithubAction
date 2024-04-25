@@ -1,0 +1,28 @@
+name: "custome ENV demo"
+
+on:
+  workflow_dispatch:
+
+env:
+  DOW: funday
+  testvar: value-1
+
+jobs:
+  custome-ENV:
+    name: "print env"
+    runs-on: ubuntu-latest
+
+    env:
+      greeting: Dear
+      testvar: value-2
+
+    steps:
+      - name: print-values-of-env
+        run: |
+          echo "$greeting $firstname today is $DOW"
+          echo "test val $testvar"
+          echo "test val ${{ env.testvar }}"
+
+        env:
+          firstname: viswa
+          textval: value-3
