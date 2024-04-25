@@ -17,4 +17,4 @@ jobs:
       - name: use the value
         id: step_two
         run: |
-          echo "$action_state" #output
+          echo "${{ steps.step_one.outputs.action_state }}" #output
