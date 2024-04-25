@@ -12,9 +12,9 @@ jobs:
       - name: set-values-of-env
         id: step_one
         run: |
-          echo "action_state = yellow" >> $GITHUB_ENV
+          echo "action_state=yellow" >> $GITHUB_ENV
 
       - name: use the value
         id: step_two
         run: |
-          echo "${{ steps.step_one.outputs.action_state }}" #output
+          echo "${{ env.action_state }}" #output
