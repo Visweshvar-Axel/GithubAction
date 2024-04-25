@@ -15,11 +15,20 @@ jobs:
 
       - name: Print a message
         run: echo "Hello, world!"
+      - name: Print a message
+        run: |
+          echo "Hello, world!"
+          echo "Hello, world!"
 
   build-app:
-    needs: build
+    # needs: build
     runs-on: windows-latest
 
+    steps:
+      - run: echo "hello windows"
+
   package:
-    needs: [build-app, build]
-    runs-on: self-hosted
+    # needs: [build-app, build]
+    runs-on: macos-latest
+    steps:
+      - run: echo "hello mack"
