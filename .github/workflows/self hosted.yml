@@ -1,0 +1,12 @@
+name: "SELF HOSTED RUNNER"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  self-runner:
+    name: SELF HOSTED RUNNER
+    runs-on: self-hosted
+    steps:
+      - name: print self hosted
+        run: echo "self hosted"
